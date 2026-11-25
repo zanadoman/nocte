@@ -14,7 +14,7 @@ func main() {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
-	_, err = tea.NewProgram(tui.Model{}).Run()
+	_, err = tea.NewProgram(tui.New()).Run()
 	f.Close()
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
